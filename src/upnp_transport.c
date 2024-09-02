@@ -495,6 +495,8 @@ static void replace_current_uri_and_meta(const char *uri, const char *meta){
 	const char *tracks = (uri != NULL && strlen(uri) > 0) ? "1" : "0";
 	replace_var(TRANSPORT_VAR_CUR_TRACK, tracks);
 	replace_var(TRANSPORT_VAR_CUR_TRACK_URI, uri);
+	//print the url
+	printf("====uri: %s\n", uri);
 	replace_var(TRANSPORT_VAR_CUR_TRACK_META, meta);
 }
 
